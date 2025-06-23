@@ -7,7 +7,39 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-   
+    <div class="library-container">
+        <h1>My Library</h1>
+        <button id="new-book-btn" class="new-book-btn">+ Add New Book</button>
+        <div id="books-grid"></div>
+    </div>
+
+    <div id="new-book-modal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Book</h2>
+            <form id="new-book-form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="pages" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="read">Have you read it?</label>
+                    <input type="checkbox" id="read" name="read">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Add Book</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="scripts/javascript.js" defer></script>
 </body>
 </html>
